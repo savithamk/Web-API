@@ -21,7 +21,14 @@ namespace Web_API_Lib
 
         public static double Division(double left, double right)
         {
-            return left / right;
+            if(right != 0)
+            {
+                return left / right;
+            }
+            else
+            {
+                throw new DivideByZeroException();
+            }
         }
     }
 }

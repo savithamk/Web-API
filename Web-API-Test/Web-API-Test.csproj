@@ -14,4 +14,7 @@
     <PackageReference Include="coverlet.collector" Version="3.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Web-API-Lib\Web-API-Logic.csproj" />
+  </ItemGroup>
 </Project>
