@@ -9,17 +9,17 @@ namespace Web_API_Lib
             return left + right;
         }
 
-        public static double Subtraction(double left, double right)
+        public static double Subtract(double left, double right)
         {
             return left - right;
         }
 
-        public static double Multiplication(double left, double right)
+        public static double Multiply(double left, double right)
         {
             return left * right;
         }
 
-        public static double Division(double left, double right)
+        public static double Divide(double left, double right)
         {
             if(right != 0)
             {

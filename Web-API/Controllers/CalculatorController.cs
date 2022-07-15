@@ -27,19 +27,19 @@ namespace Web_API.Controllers
         [HttpGet("Subtraction")]
         public double Subtraction(double left, double right)
         {
-            return Web_API_Lib.Calculator.Subtraction(left, right);
+            return Web_API_Lib.Calculator.Subtract(left, right);
         }
 
         [HttpGet("Multiplication")]
         public double Multiplication(double left, double right)
         {
-            return Web_API_Lib.Calculator.Multiplication(left, right);
+            return Web_API_Lib.Calculator.Multiply(left, right);
         }
 
         [HttpGet("Division")]
         public double Division(double left, double right)
         {
-            return Web_API_Lib.Calculator.Division(left, right);
+            return Web_API_Lib.Calculator.Divide(left, right);
         }
 
     }
