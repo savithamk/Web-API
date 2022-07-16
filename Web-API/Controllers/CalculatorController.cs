@@ -42,9 +42,19 @@ namespace Web_API.Controllers
 
         //GET http method to divide two numbers
         [HttpGet("Division")]
-        public double Division(double left, double right)
+        public IActionResult Division(double left, double right)
         {
-            return Web_API_Lib.Calculator.Divide(left, right);
+            IActionResult result;
+
+            try
+            {    
+                double res = Web_API_Lib.Calculator.Divide(left, right);
+            }
+            catch (DivideByZeroException e)
+            {
+                result = new StatusCodeResult((int)System.Net.HttpStatusCode.BadRequest);
+            }
+
         }
 
     }
