@@ -44,15 +44,15 @@ namespace Web_API.Controllers
         [HttpGet("Division")]
         public IActionResult Division(double left, double right)
         {
-            IActionResult result;
-
             try
-            {    
-                double res = Web_API_Lib.Calculator.Divide(left, right);
+            {
+                return Ok(Web_API_Lib.Calculator.Divide(left, right));
             }
             catch (DivideByZeroException e)
             {
-                result = new StatusCodeResult((int)System.Net.HttpStatusCode.BadRequest);
+                Console.WriteLine("Exception occured while dividing number by zero", e);
+                return BadRequest();
+
             }
 
         }
